@@ -5,69 +5,34 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 @Entity
+@Data
+@NoArgsConstructor
 public class StarFighter extends ModelItem {
 
-	@Id
-	@GeneratedValue
-	private Integer id;
+    private static final long serialVersionUID = 5448518077813233172L;
 
-	@Column(nullable = false)
-	private String name;
+    public StarFighter(String name) {
+        this.name = name;
+    }
 
-	@Column
-	private Integer length;
+    @Id
+    @GeneratedValue
+    private Integer id;
 
-	@Column
-	private Integer width;
+    @Column(nullable = false)
+    private String name;
 
-	@Column
-	private Integer height;
+    @Column
+    private Integer length;
 
-	public StarFighter() {
-	}
+    @Column
+    private Integer width;
 
-	public StarFighter(String name) {
-		this.name = name;
-	}
+    @Column
+    private Integer height;
 
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public Integer getLength() {
-		return length;
-	}
-
-	public void setLength(Integer length) {
-		this.length = length;
-	}
-
-	public Integer getWidth() {
-		return width;
-	}
-
-	public void setWidth(Integer width) {
-		this.width = width;
-	}
-
-	public Integer getHeight() {
-		return height;
-	}
-
-	public void setHeight(Integer height) {
-		this.height = height;
-	}
 }
