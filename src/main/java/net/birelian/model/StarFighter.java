@@ -5,13 +5,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-import groovy.transform.EqualsAndHashCode;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Data
-@EqualsAndHashCode(callSuper = false)
 @NoArgsConstructor
 public class StarFighter extends ModelItem {
 
