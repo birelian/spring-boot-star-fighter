@@ -40,8 +40,8 @@ class StarFighterController {
 	}
 
 	@PostMapping
-	public StarFighter add(@RequestBody StarFighter starFighter) {
-		return service.save(starFighter);
+	public List<StarFighter> add(@RequestBody List<StarFighter> starFighters) {
+		return service.save(starFighters);
 	}
 
 	@PutMapping

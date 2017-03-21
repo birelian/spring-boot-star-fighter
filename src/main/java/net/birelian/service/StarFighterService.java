@@ -12,6 +12,8 @@ public interface StarFighterService {
 
 	StarFighter save(StarFighter starFighter);
 
+	List<StarFighter> save(List<StarFighter> starFighters);
+
 	void delete(StarFighter starFighter);
 
 	void delete(Integer id);

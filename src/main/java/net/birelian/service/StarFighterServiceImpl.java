@@ -33,6 +33,11 @@ public class StarFighterServiceImpl implements StarFighterService {
 	}
 
 	@Override
+	public List<StarFighter> save(List<StarFighter> starFighters) {
+		return repository.save(starFighters);
+	}
+
+	@Override
 	public void delete(StarFighter starFighter) {
 		repository.delete(starFighter);
 	}
