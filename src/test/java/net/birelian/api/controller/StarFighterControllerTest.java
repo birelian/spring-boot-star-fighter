@@ -73,10 +73,10 @@ public class StarFighterControllerTest {
 	@Test
 	public void postANewStarFighterShouldReturnAStarFighterWithId() {
 
-		StarFighter starFighter = new StarFighter("Test");
+		List<StarFighter> starFighters = Arrays.asList(new StarFighter("Test"), new StarFighter("Test2"));
 
 		given()
-			.body(starFighter)
+			.body(starFighters)
 			.contentType(ContentType.JSON)
 
 		.when()
@@ -84,7 +84,7 @@ public class StarFighterControllerTest {
 
 		.then()
 			.statusCode(200)
-			.body("id", notNullValue());
+			.body("id", hasSize(2));
 	}
 
 	@Test
