@@ -8,10 +8,12 @@ import javax.persistence.Id;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 @Entity
 @Data
 @NoArgsConstructor
-public class StarFighter extends ModelItem {
+public class StarFighter implements Serializable {
 
     private static final long serialVersionUID = 5448518077813233172L;
 
